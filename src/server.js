@@ -7,10 +7,21 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
-io.on('connect', function(socket) {
-	console.log("user connected", socket.id);
-});
+const { loadMap } = require('./mapLoader');
 
-app.use(express.static("public"));
+async function main() {
 
-httpServer.listen(5000);
+	const map2D = await loadMap();
+
+	io.on('connect', function(socket) {
+		console.log("user connected", socket.id);
+	
+		socket.emit('map', map2D);
+	});
+
+	app.use(express.static("public"));
+
+	httpServer.listen(5000);
+}
+
+main();
