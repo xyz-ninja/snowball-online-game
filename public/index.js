@@ -2,6 +2,14 @@
 //const mapImage = new Image();
 //mapImage.src = "/snowy_sheet.png";
 
+class Tile {
+	constructor(id) {
+		this.id = id;
+		this.image = null;
+		this.isTextureLoaded = false;
+	}
+}
+
 class MainScene extends Phaser.Scene {
 
 	constructor() {
