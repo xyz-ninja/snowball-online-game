@@ -3,12 +3,23 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "winter.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
+        "winter.tmx": {
+            "scale": 2,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 762,
+                "y": 694
+            }
+        },
         "winter.tsx": {
-            "dynamicWrapping": true
+            "dynamicWrapping": true,
+            "scaleInDock": 2,
+            "scaleInEditor": 3
         }
     },
     "last.imagePath": "D:/SINDICATO/snowball-online-game/public/graphics/assets/Tiles/Ground Tiles",
@@ -18,9 +29,13 @@
     "map.tileWidth": 16,
     "map.width": 100,
     "openFiles": [
+        "winter.tmx",
+        "winter.tsx"
     ],
     "project": "project.tiled-project",
     "recentFiles": [
+        "winter.tsx",
+        "winter.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.type": 1

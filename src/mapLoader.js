@@ -7,6 +7,7 @@ async function loadMap() {
 			
 			resolve(loadedMap);	
 			console.log(loadedMap);
+			console.log(loadedMap.layers[0].horizontalFlips);
 		});
 	});
 	
@@ -18,12 +19,18 @@ async function loadMap() {
 	
 	for (let row = 0; row < map.height; row++) {
 		for (let col = 0; col < map.width; col++) {
-			const tile = tiles[row * map.height + col];
+			const tileIndex = row * map.height + col;
+			const tile = tiles[tileIndex];
+			const flipX = layer.horizontalFlips[tileIndex];
+			const flipY = layer.verticalFlips[tileIndex];
+
 			//console.log(tile);
 			map2D[row][col] = {
 				id : tile.id,
 				gid : tile.gid,
 				source: tile.image.source,
+				flipX : flipX,
+				flipY : flipY
 			};
 		}
 	}

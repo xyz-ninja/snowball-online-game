@@ -20,6 +20,7 @@ async function main() {
 	});
 
 	app.use(express.static("public"));
+	app.use(express.static("libs"));
 
 	httpServer.listen(5000);
 }
